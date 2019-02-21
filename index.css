@@ -3,43 +3,60 @@
 *{
   box-sizing:border-box;
 }
-html, body{
-  width:100%;
-  height:100%;
-}
+
 body{
   background: rgba(143, 133, 133, 0.301);
   font-weight: 400;
   font-size: 1em;
   font-family: 'Raleway', Arial, sans-serif;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+#wild{
+  margin: auto;
 }
 
 #title{
   color:palevioletred;
-  margin-left: 19%;
-  font-size: 50px;
+  text-align: center;
+  font-size: 60px;
   font-style: bold;
+  margin: 20px;
 }
+
+.container-cards{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
 .container, figure{
-  width:450px;
-  height: 270px;
+  width:90%;
+  margin: auto;
+  height: auto;
+  max-height: 800px;
+  
 }
 
 .container{
   position: relative;
   -webkit-perspective:1000;
           perspective:1000;
-  margin-top:-135px;
   top:50%;
 }
 
+
 .card{
-  position: relative;
   -webkit-transition:0.6s;
   transition: 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+          
+          
 }
 
 figure{
@@ -58,12 +75,16 @@ figure{
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  
 }
 
 figure.front{
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
   z-index: 2;
+  max-height: 300px;
+  max-width: 600px;
+
 }
 
 figure.back,
@@ -74,8 +95,9 @@ figure.back,
 
 figure img{
   position: relative;
+  height: 100%;
+  width: 100%;
   display: block;
-  min-height: 100%;
   opacity: 0.7;
 }
 
@@ -122,7 +144,7 @@ figure .caption {
 .front h2{
   word-spacing: -0.15em;
   font-weight: 300;
-  font-size: 1.6em;
+  font-size: 4vw;
   position: absolute;
   top: 50%;
   left: 0;
@@ -138,6 +160,7 @@ figure .caption {
 
 .front h2 span {
   font-weight: bold;
+
 }
 
 .front h2:after{
@@ -158,8 +181,8 @@ figure .caption {
 
 .front:hover h2 {
   color: #fff;
-  -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-  transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+  -webkit-transform: translate3d(0,-50%,0) translate3d(0,-25px,0);
+  transform: translate3d(0,-50%,0) translate3d(0,-25px,0);
 }
 
 .front:hover h2:after {
@@ -169,11 +192,11 @@ figure .caption {
 
 .front p {
   letter-spacing: 1px;
-  font-size: 68.5%;
+  font-size: 2vw;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
-  padding: 2em;
+  padding: 1  em;
   width: 100%;
   opacity: 0;
   -webkit-transform: translate3d(0,10px,0);
@@ -287,14 +310,22 @@ figure a{
   width: 100%;
   height: 100%;
 }
-section{
-  align-items: flex-start;
-  margin: 14%;
+
+footer{
+    text-align: center;
+    margin-top: 8%;
 }
 
-@media (min-width: 450px) {
-  .container{
-    left: 50%;
-    margin-left:-225px;
-  }
+footer img{
+  border-radius: 50%;
+}
+
+.logo-wild{
+  width: 10%;
+  height: 10;
+  border: 50%;
+}
+
+section{
+  margin-bottom: 20px
 }
