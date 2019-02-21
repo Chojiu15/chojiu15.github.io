@@ -20,7 +20,7 @@ body{
 }
 
 #title{
-  color:palevioletred;
+  color: rgba(247, 108, 108);
   text-align: center;
   font-size: 60px;
   font-style: bold;
