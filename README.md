@@ -1,1 +1,1 @@
-# chojiu15.github.io
+Wild code school project resume ; React / Node February 2019 session
